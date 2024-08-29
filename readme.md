@@ -25,3 +25,7 @@ by clicking the pen icon in each task it will prompt by pre filling the existing
 by clicking the delete bin on each task we get a prompt asking to confirm deletion where we can delete the task
 
 <img src="./images/taskDeletion.png" >
+
+## Video
+
+<video src="./taskManager.mp4" controls></video>
