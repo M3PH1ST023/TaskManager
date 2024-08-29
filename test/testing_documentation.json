@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "5606d425-843c-45d5-a2f9-9d4feeb391a8",
+		"name": "TaskManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30537999"
+	},
+	"item": [
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sample1\",\r\n    \"description\": \"sample\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{express}}/api/v1/task",
+							"host": [
+								"{{express}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"task"
+							]
+						},
+						"description": "adding or posting a new task"
+					},
+					"response": []
+				},
+				{
+					"name": "getTask",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{express}}/api/v1/task",
+							"host": [
+								"{{express}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"task"
+							]
+						},
+						"description": "fetching all existing tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sample\",\r\n    \"description\": \"sample\",\r\n    \"completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{express}}/api/v1/task/66d02e6dbc7fc2d8d37e83b6",
+							"host": [
+								"{{express}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"task",
+								"66d02e6dbc7fc2d8d37e83b6"
+							]
+						},
+						"description": "updating tasks using id of task as parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{express}}/api/v1/task/66d02e6dbc7fc2d8d37e83b6",
+							"host": [
+								"{{express}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"task",
+								"66d02e6dbc7fc2d8d37e83b6"
+							]
+						},
+						"description": "deleting tasks using id of task as parameter"
+					},
+					"response": []
+				}
+			],
+			"description": "/api/v1/task"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
